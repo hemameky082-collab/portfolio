@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibrahem Abdelhafeez | Front-End Developer</title>
+  <meta name="description" content="Portfolio of Ibrahem Abdelhafeez, front-end developer from Obour, Egypt. React, TypeScript and modern CSS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Great+Vibes&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Apply saved/forced theme and language before first paint (no dark flash),
+    // and let ?noanim freeze all transitions for deterministic screenshots.
+    try {
+      var qp = new URLSearchParams(location.search);
+      var theme = qp.get('theme') || localStorage.getItem('theme') || 'dark';
+      var lang = qp.get('lang') || localStorage.getItem('lang') || 'en';
+      var h = document.documentElement;
+      h.classList.toggle('light', theme === 'light');
+      h.classList.toggle('dark', theme !== 'light');
+      if (qp.has('noanim')) h.classList.add('noanim');
+      h.lang = lang;
+      h.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
